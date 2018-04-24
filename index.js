@@ -15,14 +15,14 @@ slimbot.getWebhookInfo()
 
 // Register listeners
 server.post(`/${process.env["BOT_KEY"]}`, function handle(req, res, next) {
-  let message = req.body.message
-  console.log(req)
-  if (!message || !message.text) {
+  let query = req.body.inline_query
+  console.log(query.from)
+  if (!query || !query.query) {
     res.send(200)
     return next()
   }
 
-  slimbot.sendMessage(message.chat.id,message.text)
+  slimbot.sendMessage(query.from.id,query.query)
   res.send(200)
   return next()
 })
