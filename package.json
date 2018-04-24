@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lucasMarioza/TelegramGroupMetion.git"
+    "url": "git+https://github.com/lucasMarioza/BinoBot.git"
   },
   "keywords": [
     "bot",
@@ -20,11 +20,10 @@
   "author": "https://github.com/lucasMarioza",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lucasMarioza/TelegramGroupMetion/issues"
+    "url": "https://github.com/lucasMarioza/BinoBot/issues"
   },
-  "homepage": "https://github.com/lucasMarioza/TelegramGroupMetion#readme",
+  "homepage": "https://github.com/lucasMarioza/BinoBot#readme",
   "dependencies": {
-    "firebase": "^4.6.2",
     "restify": "^6.3.4",
     "slimbot": "^0.7.8"
   },
