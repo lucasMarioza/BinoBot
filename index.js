@@ -16,7 +16,6 @@ slimbot.getWebhookInfo()
 // Register listeners
 server.post(`/${process.env["BOT_KEY"]}`, function handle(req, res, next) {
   let query = req.body.inline_query
-  console.log(query.from)
   if (!query || !query.query) {
     res.send(200)
     return next()
