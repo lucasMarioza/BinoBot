@@ -22,7 +22,7 @@ server.post(`/${process.env["BOT_KEY"]}`, function handle(req, res, next) {
   slimbot.answerInlineQuery(query.id, [
     {
       type: "Bino",
-      id: 0,
+      id: "0",
       title: "Bino",
       input_message_content: { message_text: query.query }
     }
