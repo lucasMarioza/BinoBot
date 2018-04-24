@@ -20,7 +20,7 @@ server.post(`/${process.env["BOT_KEY"]}`, function handle(req, res, next) {
     res.send(200)
     return next()
   }
-  slimbot.editInlineMessageText(req.body.update_id, 'edited message');
+  slimbot.answerInlineQuery(query.id, query.query);
 
   //slimbot.sendMessage(query.from.id,query.query)
   res.send(200)
