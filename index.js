@@ -2,7 +2,6 @@ const Slimbot = require("slimbot")
 const slimbot = new Slimbot(process.env["BOT_KEY"])
 const restify = require("restify")
 
-
 let server = restify.createServer()
 //console.log(restify);
 server.use(restify.plugins.bodyParser())
@@ -20,7 +19,14 @@ server.post(`/${process.env["BOT_KEY"]}`, function handle(req, res, next) {
     res.send(200)
     return next()
   }
-  slimbot.answerInlineQuery(query.id, query.query);
+  slimbot.answerInlineQuery(query.id, [
+    {
+      type: "",
+      id: 0,
+      title: "",
+      input_message_content: { message_text: query.query }
+    }
+  ])
 
   //slimbot.sendMessage(query.from.id,query.query)
   res.send(200)
